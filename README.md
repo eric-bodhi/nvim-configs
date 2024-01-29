@@ -1,4 +1,4 @@
-# 💤 LazyVim
+# Lua configs for Vim using Lazy
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+Using lazy package manager
+To anyone seeing this please give feedback whenever, I'm new to vim.
