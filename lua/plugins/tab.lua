@@ -24,9 +24,17 @@ return {
                 end
             end, { "i", "s" }),
 
-            ["<CR>"] = cmp.mapping(function()
-                return "\n"
+            ["<S-Tab>"] = cmp.mapping(function(fallback)
+                if cmp.visible() then
+                    cmp.confirm({ select = true })
+                elseif luasnip.jumpable(-1) then
+                    luasnip.jump(-1)
+                else
+                    fallback()
+                end
             end, { "i", "s" }),
+
+            ["<CR>"] = cmp.config.disable,
         })
     end,
 }
